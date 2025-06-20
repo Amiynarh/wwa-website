@@ -6,8 +6,8 @@ import { initializeNumberCounters } from './modules/numberCounter.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     try {
-        // Initialize countdown for July 1, 2025
-        initializeCountdown('July 1, 2025 00:00:00');
+        // Initialize countdown for July 27, 2025
+        initializeCountdown('June 27, 2025 00:00:00');
         
         // Setup cursor trails effect
         setupCursorTrails();
@@ -31,6 +31,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+        // Form slider handling
+        const form = document.getElementById('application-form');
+        if (form) {
+            // Update slider value display
+            const pythonLevelSlider = document.getElementById('python-level');
+            if (pythonLevelSlider) {
+                pythonLevelSlider.addEventListener('input', function() {
+                    this.nextElementSibling.value = this.value;
+                });
+            }
+        }
 
     } catch (error) {
         console.error('Initialization error:', error);
