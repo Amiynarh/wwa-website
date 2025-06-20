@@ -6,7 +6,7 @@ import { initializeNumberCounters } from './modules/numberCounter.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     try {
-        // Initialize countdown for July 27, 2025
+        // Initialize countdown for June 27, 2025 (6 days from now)
         initializeCountdown('June 27, 2025 00:00:00');
         
         // Setup cursor trails effect
